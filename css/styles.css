@@ -66,3 +66,49 @@
         opacity: 0;
     }
 }
+
+
+/* transform-rotate branch */
+.rotate-box{
+    background: #8F07E8;
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+    display: inline-block;
+}
+
+.rotate-20{
+    transform: rotate(20deg);
+}
+
+.rotate-neg-20{
+    /* transform: rotate(20deg); */
+    animation: roll-back .8s infinite;
+    animation-direction: alternate;
+}
+
+.rotate-full{
+    /* transform: rotate(20deg); */
+    animation: roll 1s infinite;
+    /* animation-direction: alternate; */
+}
+
+@keyframes roll-back{
+    0%{
+        transform: rotate(20deg);
+    }
+
+    100%{
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes roll{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
